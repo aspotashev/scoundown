@@ -1,0 +1,4 @@
+/simple-countdown
+/*.o
+/moc_*.cpp
+/Makefile
