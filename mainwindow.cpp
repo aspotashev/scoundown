@@ -1,13 +1,13 @@
 #include <QTimer>
 #include "mainwindow.h"
 
-MainWindow::MainWindow()
+MainWindow::MainWindow(int timeOut)
 {
 	labelTime = new QLabel(this);
 	setCentralWidget(labelTime);
 	labelTime->show();
 
-	timeLeft = 300; // 5 minutes
+	timeLeft = timeOut;
 
 	labelTime->setFont(QFont("Monaco", 200, QFont::Bold));
 	labelTime->setAlignment(Qt::AlignCenter);
@@ -37,7 +37,7 @@ void MainWindow::tick()
 	
 	if (timeLeft == 0)
 	{
-		labelTime->setText("XPEH");
+//		labelTime->setText("XPEH");
 		timerTick->stop();
 	}
 

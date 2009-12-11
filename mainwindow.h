@@ -7,7 +7,7 @@ class MainWindow : public QMainWindow
 	Q_OBJECT
 
 public:
-	MainWindow();
+	MainWindow(int timeOut);
 	~MainWindow();
 
 private slots:
