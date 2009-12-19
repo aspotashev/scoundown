@@ -10,6 +10,12 @@ public:
 	MainWindow(int timeOut);
 	~MainWindow();
 
+	void startTimer();
+	void setTimeLabel();
+	void setTextColor(const QColor &c);
+
+	void keyPressEvent(QKeyEvent *event);
+
 private slots:
 	void tick();
 
