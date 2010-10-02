@@ -1,12 +1,12 @@
 #include <QTimer>
 #include <QKeyEvent>
+
+#include <QPainter>
 #include "mainwindow.h"
 
 MainWindow::MainWindow(int timeOut)
 {
 	labelTime = new QLabel(this);
-	setCentralWidget(labelTime);
-	labelTime->show();
 
 	timeLeft = timeOut;
 
@@ -45,6 +45,12 @@ void MainWindow::startTimer()
 		timerTick->start(1000);
 		tick();
 	}
+}
+
+void MainWindow::paintEvent(QPaintEvent *event)
+{
+    QPainter painter (this);
+    painter.drawLine(0, 0, 100, 100);
 }
 
 void MainWindow::keyPressEvent(QKeyEvent *event)

@@ -16,6 +16,8 @@ public:
 
 	void keyPressEvent(QKeyEvent *event);
 
+	void paintEvent(QPaintEvent *event);
+
 private slots:
 	void tick();
 
